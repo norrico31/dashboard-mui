@@ -14,9 +14,34 @@ const Topbar = () => {
     const {toggleColorMode} = useContext(ColorModeContext)
     return (
         <Box display='flex' justifyContent='space-between'>
-
+            <Box display='flex' backgroundColor={colors.primary[400]} borderRadius='3px'>
+                <InputBase sx={{ml: 2, flex: 1}} placeholder='Search...' />
+                <IconButton type='button' sx={{p:1}}>
+                    <SearchIcon />
+                </IconButton>
+            </Box>
+            <Box display='flex'>
+                <IconButton onClick={toggleColorMode}>
+                    {theme.palette.mode === 'dark' ? (
+                        <DarkModeOutlinedIcon />
+                    ) : (
+                        <LightModeOutlinedIcon />
+                    )}
+                </IconButton>
+                <IconButton>
+                    <NotificationsOutlinedIcon />
+                </IconButton>
+                <IconButton>
+                    <SettingsOutlinedIcon />
+                </IconButton>
+                <IconButton>
+                    <PersonOutlinedIcon />
+                </IconButton>
+            </Box>
         </Box>
     )
 }
 
 export default Topbar
+
+// 50: 08 video time
