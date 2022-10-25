@@ -15,6 +15,4 @@ function App() {
 	)
 }
 
-export default App;
-
-// 36:36 video time
+export default App
