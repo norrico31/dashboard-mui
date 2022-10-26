@@ -1,5 +1,5 @@
 import {createContext, useState, useMemo} from 'react'
-import { createTheme } from '@mui/system'
+import { createTheme } from '@mui/material/styles'
 
 // colors
 export const tokens = (mode) => ({
@@ -27,7 +27,6 @@ export const tokens = (mode) => ({
             900: "#d0d1d5",
         },
         greenAccent: {
-        },
             100: "#0f2922",
             200: "#1e5245",
             300: "#2e7c67",
@@ -37,6 +36,7 @@ export const tokens = (mode) => ({
             700: "#94e2cd",
             800: "#b7ebde",
             900: "#dbf5ee",
+        },
         redAccent: {
             100: "#2c100f",
             200: "#58201e",
