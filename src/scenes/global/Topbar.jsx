@@ -44,5 +44,3 @@ const Topbar = () => {
 }
 
 export default Topbar
-
-// 51: 00 video time
