@@ -1,6 +1,7 @@
 import React from 'react'
-import { Box, Button } from '@mui/system'
+import { Box } from '@mui/system'
 import TextField from '@mui/material/TextField'
+import Button from '@mui/material/Button'
 import { Formik } from 'formik'
 import * as yup from 'yup'
 import  useMediaQuery  from '@mui/material/useMediaQuery'
@@ -42,7 +43,7 @@ export default function Form() {
                 validationSchema={userSchema}
             >
                 {({values, errors, touched, handleBlur, handleChange, handleSubmit}) => (
-                    <form onSubmit={onSubmit}>
+                    <form onSubmit={handleSubmit}>
                         <Box 
                             display='grid' 
                             gap='30px' 
@@ -131,6 +132,9 @@ export default function Form() {
                                 helperText={touched.address2 && errors.address2}
                                 sx={{gridColumn: 'span 4'}}
                             />
+                        </Box>
+                        <Box display='flex' justifyContent='end' mt='20px'>
+                            <Button type='submit' color='secondary' variant='contained'>Create New User</Button>
                         </Box>
                     </form>
                 )}
